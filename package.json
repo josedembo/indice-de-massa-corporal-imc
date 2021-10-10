@@ -1,10 +1,11 @@
 {
   "name": "indice-de-massa-corporal-imc",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
