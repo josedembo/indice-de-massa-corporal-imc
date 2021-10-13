@@ -18,6 +18,7 @@ Tabela de conteúdos
       * [dependências](#dependências)
       * [Rodando o Back End (servidor)](#rodando-o-back-end)
       * [Docker](#docker)
+   * [Consumindo a API](#consumindo-a-api)
    * [Tecnologias](#tecnologias)
    * [Autor](#autor)
 <!--te-->
@@ -49,7 +50,7 @@ Após isso é recomendável a instalação de um editor de código(caso não ten
 $ git clone <https://github.com/josedembo/indice-de-massa-corporal-imc>
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd CappacitaMovies
+$ cd indice-de-massa-corporal-imc
 
 # Instale as dependências
 $ npm install 
@@ -60,9 +61,26 @@ $ npm run dev
 # O servidor estará rodando  na porta:8080
 ```
 ### Docker 
- * para rodar a aplicação via imagem docker: baixe a imagem com o comando `docker push josedembo/calculador-imc:tagname` no repositório [Josedembo\calculador-imc](https://hub.docker.com/repository/docker/josedembo/calculador-imc) e rodar o container com o comando `docker container run -d -p 8080:8080 josedembo/calculador-imc:v2.0`, ou pode simplismente rodar o container.
- *
+ * para rodar a aplicação via imagem docker: baixe a imagem com o comando `docker push josedembo/calculador-imc:tagname` no repositório [Josedembo/calculador-imc](https://hub.docker.com/repository/docker/josedembo/calculador-imc) e rodar o container com o comando `docker container run -d -p 8080:8080 josedembo/calculador-imc:v2.0`, ou pode simplismente rodar o container.
+ 
+### Consumindo a API
+como apenas uma rota bem simples, é possível usar a API para calcular o IMC
+#### **Endpoint**
+##### `GET` `/imc`
+a requisição é feita com parêmetros de rotas do tipo query e as propiedades são: 
+  - peso
+  - altura 
+ #### Exemplo de requisição
+```json
+// GET /imc?peso=70&altura=1.60
+   https://calculador-imc.herokuapp.com/imc?peso={valor-do-peso}&altura={valor-da-altura}
+//rodando a aplicação localmente http://localhost:8080/imc?peso={valor-do-peso}&altura={valor-da-altura}
+```
+#### Exemplo de resposta
 
+```json
+  {"imc":"O seu IMC é 27.34 : Sobrepeso"}
+```
 ## Tecnologias
 As ferramentas abaixo foram usadas para a construção do projeto: 
 
