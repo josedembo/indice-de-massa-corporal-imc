@@ -18,7 +18,7 @@
     <!--Header-start -->
     <header>
         <div class="container text-center">
-            <h1>Calculadora de Indece de Massa Corporal - IMC</h1>
+            <h1>Calculadora de Índice de Massa Corporal - IMC</h1>
         </div>
 
     </header>
@@ -29,7 +29,7 @@
             <table class="table text-center">
                 <thead class="table-dark">
                     <tr>
-                        <th scope="col">IMC</th>
+                        <th scope="col">IMC(kg/m<sup>2</sup>)</th>
                         <th scope="col">Resultado</th>
                     </tr>
                 </thead>
@@ -66,6 +66,12 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="bg-success bg-info text-center" id="info">
+                <p>Para saber mais sobre IMC e sobre o resultado obtido no cálculo, <strong>clique no
+                        botão azul</strong> para falar com
+                    a assistente
+                    virtual</p>
+            </div>
             <form action="/" method="post">
                 <div class="bg-success bg-gradient text-center">
                     <% if(imc){ %>
@@ -77,11 +83,11 @@
                         <% }%>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPeso" class="form-label">Peso</label>
+                    <label for="exampleInputPeso" class="form-label">Peso(kg)</label>
                     <input type="text" class="form-control" id="exampleInputPeso" name="peso"
                         aria-describedby="emailHelp">
                     <div class="mb-3">
-                        <label for="exampleInputAltura" class="form-label">Altura</label>
+                        <label for="exampleInputAltura" class="form-label">Altura(m)</label>
                         <input type="text" class="form-control" name="altura" id="exampleInputAltura">
                     </div>
                     <button type="submit" class="btn btn-primary">Calcular</button>
@@ -103,5 +109,34 @@
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "e809ecf7-9ea7-42eb-80fb-79ef0d917591", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "641a1d6e-cf9c-4e04-b971-c169c4ea4b4b", // The ID of your service instance.
+        onLoad: function (instance) { instance.render(); }
+    };
+    setTimeout(function () {
+        const t = document.createElement('script');
+        t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js"
+        document.head.appendChild(t);
+    });
+</script>
+<script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "e809ecf7-9ea7-42eb-80fb-79ef0d917591", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "641a1d6e-cf9c-4e04-b971-c169c4ea4b4b", // The ID of your service instance.
+        onLoad: function (instance) {
+            instance.updateLocale("pt-br");
+            instance.render();
+        }
+    };
+    setTimeout(function () {
+        const t = document.createElement('script');
+        t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js"
+        document.head.appendChild(t);
+    });
+</script>
 
 </html>
