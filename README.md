@@ -100,6 +100,6 @@ As ferramentas abaixo foram usadas para a construção do projeto:
  <sub><b>José Pedro Daniel Dembo</b></sub></a> <a href="https://github.com/josedembo" title="josedembo">🚀</a>
 
 
-Primeiro grande projeto feito com muita dedicação e ❤️
+Feito com muita dedicação e ❤️
  
 [![Linkedin Badge](https://img.shields.io/badge/-josedembo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/josedembo/)](https://www.linkedin.com/in/josedembo/) 
