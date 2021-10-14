@@ -61,13 +61,14 @@ $ npm run dev
 # O servidor estará rodando  na porta:8080
 ```
 ### Docker 
- * para rodar a aplicação via imagem docker: baixe a imagem com o comando `docker push josedembo/calculador-imc:tagname` no repositório [Josedembo/calculador-imc](https://hub.docker.com/repository/docker/josedembo/calculador-imc) e rodar o container com o comando `docker container run -d -p 8080:8080 josedembo/calculador-imc:v2.0`, ou pode simplismente rodar o container.
+Como pré-requisito, precisa ter o docker instaldo em sua máquina, se a sua máquina roda com sitema operacional Windows siga o tutorial de instalção [Docker + WSL2](https://github.com/codeedu/wsl2-docker-quickstart), se for linux siga o guia de instação [docker-linux](https://docs.docker.com/engine/install/)
+ * Para rodar a aplicação via imagem docker: baixe a imagem com o comando `docker push josedembo/calculador-imc:tagname` no repositório [Josedembo/calculador-imc](https://hub.docker.com/repository/docker/josedembo/calculador-imc) e rodar o container com o comando `docker container run -d -p 8080:8080 josedembo/calculador-imc:v2.0`, ou pode simplismente rodar o container.
  
 ### Consumindo a API
-como apenas uma rota bem simples, é possível usar a API para calcular o IMC
+Como apenas uma rota bem simples, é possível usar a API para calcular o IMC
 #### **Endpoint**
 ##### `GET` `/imc`
-a requisição é feita com parêmetros de rotas do tipo query e as propiedades são: 
+A requisição é feita com parêmetros de rotas do tipo query e as propiedades são: 
   - peso
   - altura 
  #### Exemplo de requisição
