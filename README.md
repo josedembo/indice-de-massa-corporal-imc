@@ -73,8 +73,8 @@ a requisição é feita com parêmetros de rotas do tipo query e as propiedades 
  #### Exemplo de requisição
 ```json
 // GET /imc?peso=70&altura=1.60
-   https://calculador-imc.herokuapp.com/imc?peso={valor-do-peso}&altura={valor-da-altura}
-//rodando a aplicação localmente http://localhost:8080/imc?peso={valor-do-peso}&altura={valor-da-altura}
+   https://calculador-imc.herokuapp.com/imc?peso=<valor-do-peso>&altura=<valor-da-altura>
+//rodando a aplicação localmente http://localhost:8080/imc?peso=<valor-do-peso>&altura=<valor-da-altura>
 ```
 #### Exemplo de resposta
 
