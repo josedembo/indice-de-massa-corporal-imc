@@ -26,7 +26,7 @@ app.post("/", (request, response) => {
 app.get("/imc", (request, response) => {
     const { peso, altura } = request.query;
     if (!peso || !altura) {
-        return response.status(404).json({ error: "bad request" })
+        return response.status(404).json({ error: "not found" })
     }
 
     const imcResult = calculaIMC(peso, altura);
